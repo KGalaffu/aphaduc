@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
-import ButtonsProviders from "@/app/components/ButtonsProviders";
+// import ButtonsProviders from "@/app/components/ButtonsProviders";
 import Image from "next/image";
 import LogoMdc from "../public/logo.png";
 import { Typewriter, Cursor } from "react-simple-typewriter";
