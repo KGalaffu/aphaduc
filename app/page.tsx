@@ -183,38 +183,39 @@ const [selectedOffer, setSelectedOffer] = useState<
     },
     {
       id: 4,
-      title: "Bienvenue sur le site de l'Association Aphaduc",
+      title: "Comment nous aider ?",
       description:
-        "Découvrez comment nous soutenons les migrants et les personnes en voie de naturalisation à Genève et au Cameroun.",
+        "Découvrez comment nous aider dans nos projets.",
       fullContent: `
-        Nous sommes ravis de vous accueillir sur le site de l'Association Aphaduc, une organisation à but non lucratif dédiée à l'amélioration de la qualité de vie des migrants et des personnes en voie de naturalisation. 
-        Basée à Genève, notre association œuvre avec passion et engagement pour créer un environnement inclusif et solidaire, où chacun peut s'épanouir et trouver sa place dans la société.
-        Depuis notre création, nous avons développé une multitude d'initiatives et de programmes qui visent à soutenir les populations vulnérables, tant à Genève qu'au Cameroun. 
-        Grâce à nos ateliers, formations, et groupes de parole, nous favorisons l'échange, la connaissance, et le soutien mutuel entre les membres de notre communauté. 
-        Notre projet phare, le Centre d'Accueil et de Recherche APHADUC, vise à offrir un refuge aux enfants défavorisés et handicapés, tout en leur fournissant les ressources nécessaires pour accéder à l'éducation et à la formation.
-        Parallèlement, notre Programme d'Accompagnement à l'Intégration Éducative pour les Jeunes Migrants aide les jeunes à valider leurs compétences et à s'intégrer dans le système éducatif.
-        Nous croyons fermement que chaque individu a un potentiel unique à offrir. C'est pourquoi nous nous engageons à promouvoir l'égalité des chances et à soutenir le développement personnel et professionnel de chaque membre de notre communauté.
-        Rejoignez-nous dans notre mission et découvrez comment vous pouvez contribuer à faire une différence. Ensemble, construisons un avenir meilleur, basé sur la solidarité, le respect, et l’inclusion.
+        Faire un don
+        Votre soutien financier est essentiel pour nous permettre de réaliser nos projets. Vous
+        pouvez faire un don en ligne ou par virement bancaire.
+        Devenir membre
+        Rejoignez notre association en devenant membre. Vous contribuerez ainsi activement à
+        notre mission et bénéficierez d&#39;une plateforme pour vous engager.
+        Bénévolat
+        Nous sommes toujours à la recherche de bénévoles passionnés pour nous aider dans nos
+        activités. Si vous souhaitez vous engager, n&#39;hésitez pas à nous contacter.
       `,
       bgColor: "bg-yellow-500",
       imgSrc: "https://craft.stiftung-mercator.ch/files/Fotos/_previewImage2x/PLN-Kommunikation.jpg", // Tu peux ajouter une image appropriée
     },
-    {
-      id: 5,
-      title: "Update für die Demokratie?",
-      description:
-        "Das Demokratie Labor Basel testet und erforscht demokratische Prozesse und verschiedene Formen der Bürger:innen-Beteiligung.",
-      bgColor: "bg-blue-500",
-    },
-    {
-      id: 6,
-      title: "51 Klima-Karten fördern Partizipation auf lokaler Ebene",
-      description:
-        "Wo stehen Kantone und Gemeinden hinsichtlich der Pariser Klimaziele? Interaktive Klima-Karten geben Antworten.",
-      bgColor: "bg-pink-500",
-      imgSrc:
-        "https://craft.stiftung-mercator.ch/files/Fotos/_previewImage2x/PLN-Kommunikation.jpg",
-    },
+    // {
+    //   id: 5,
+    //   title: "Update für die Demokratie?",
+    //   description:
+    //     "Das Demokratie Labor Basel testet und erforscht demokratische Prozesse und verschiedene Formen der Bürger:innen-Beteiligung.",
+    //   bgColor: "bg-blue-500",
+    // },
+    // {
+    //   id: 6,
+    //   title: "51 Klima-Karten fördern Partizipation auf lokaler Ebene",
+    //   description:
+    //     "Wo stehen Kantone und Gemeinden hinsichtlich der Pariser Klimaziele? Interaktive Klima-Karten geben Antworten.",
+    //   bgColor: "bg-pink-500",
+    //   imgSrc:
+    //     "https://craft.stiftung-mercator.ch/files/Fotos/_previewImage2x/PLN-Kommunikation.jpg",
+    // },
   ];
 
   return (
@@ -242,52 +243,50 @@ const [selectedOffer, setSelectedOffer] = useState<
         <p className="my-2">Association à but non lucratif</p>
       </section>
 
-      <div className="container mx-auto px-12">
-      <section className="w-full h-screen grid grid-cols-1 md:grid-cols-3 gap-4 px-12 py-12">
-
-      {cards.map((card) => (
-        <motion.div
-          key={card.id}
-          className={`${card.bgColor} text-black p-8 group cursor-pointer`}
-          layoutId={`card-${card.id}`}
-          onClick={() => setSelectedCard(card)}
-          initial={{ opacity: 0, scale: 0.8 }} // Animation initiale des cartes
-          animate={{ opacity: 1, scale: 1 }} // Animation des cartes
-          exit={{ opacity: 0, scale: 0.8 }} // Animation de sortie des cartes
-          transition={{ duration: 0.5 }} // Durée de l'animation
-        >
-          <div className="overflow-hidden">
-            {card.imgSrc && (
-              <img
-                src={card.imgSrc}
-                alt={card.title}
-                className="mb-4 w-full h-auto transform transition-transform duration-500 group-hover:scale-105 p-2"
-              />
-            )}
-          </div>
-          <h3 className="text-xl font-bold transform transition-transform duration-500 group-hover:scale-105 p-2">
-            {card.title}
-          </h3>
-          <p className="pt-8">{card.description}</p>
-        </motion.div>
-      ))}
-
+      <div className={`${selectedCard ? '' : 'container'}`}>
+  <section className="w-full h-50 grid grid-cols-1 md:grid-cols-4 gap-4 px-12 py-12">
+    {cards.map((card) => (
+      <motion.div
+        key={card.id}
+        className={`${card.bgColor} text-black p-8 group cursor-pointer`}
+        layoutId={`card-${card.id}`}
+        onClick={() => setSelectedCard(card)}
+        initial={{ opacity: 0, scale: 0.8 }} // Animation initiale des cartes
+        animate={{ opacity: 1, scale: 1 }} // Animation des cartes
+        exit={{ opacity: 0, scale: 0.8 }} // Animation de sortie des cartes
+        transition={{ duration: 0.5 }} // Durée de l'animation
+      >
+        <div className="overflow-hidden">
+          {card.imgSrc && (
+            <img
+              src={card.imgSrc}
+              alt={card.title}
+              className="mb-4 w-full h-auto transform transition-transform duration-500 group-hover:scale-105 p-2"
+            />
+          )}
+        </div>
+        <h3 className="text-xl font-bold transform transition-transform duration-500 group-hover:scale-105 p-2">
+          {card.title}
+        </h3>
+        <p className="pt-8">{card.description}</p>
+      </motion.div>
+    ))}
 <AnimatePresence>
         {selectedCard && (
           <motion.div
-            className="fixed top-0 left-0 w-full h-full bg-black text-white p-6 z-50 flex flex-col justify-center items-center text-center"
-            layoutId={`card-${selectedCard.id}`}
+          className="fixed top-0 left-0 w-full h-full bg-black text-white z-50 flex flex-col justify-center items-center text-center p-4 md:p-8"
+          layoutId={`card-${selectedCard.id}`}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.5 }}
             onClick={() => setSelectedCard(null)} // Ferme au clic
           >
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-4xl font-bold mb-4">{selectedCard.title}</h3>
+            <div className="mx-auto px-8">
+              <h3 className="text-4xl font-bold mb-4 pb-8">{selectedCard.title}</h3>
               <p className="text-lg leading-relaxed mb-4">{selectedCard.fullContent}</p>
               <div className="mt-8">
-                <a href="#" className="underline text-lg">En savoir plus</a>
+                <a href="#" className="underline text-lg pt-8">En savoir plus</a>
               </div>
             </div>
           </motion.div>
@@ -338,15 +337,15 @@ const [selectedOffer, setSelectedOffer] = useState<
       <AnimatePresence>
   {selectedOffer && (
     <motion.div
-      className="fixed top-0 left-0 w-full h-full bg-black text-white p-6 z-50 flex items-center justify-center"
-      layoutId={`offer-${selectedOffer.id}`}
+    className="fixed top-0 left-0 w-full h-full bg-black text-white z-50 flex flex-col justify-center items-center text-center p-4 md:p-8"
+    layoutId={`offer-${selectedOffer.id}`}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.5 }}
       onClick={() => setSelectedOffer(null)} // Ferme au clic
     >
-      <div className="max-w-3xl text-center mx-auto">
+      <div className="text-center mx-auto">
         <h3 className="text-4xl font-bold mb-4">{selectedOffer.title}</h3>
         <p className="text-lg leading-relaxed whitespace-pre-wrap">{selectedOffer.details}</p> {/* Ajoute des sauts de ligne */}
         
