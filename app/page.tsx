@@ -295,16 +295,6 @@ const [selectedOffer, setSelectedOffer] = useState<
       </section>
       </div>
 
-
-
-
-
-
-
-    
-
-
-
       <section className="w-full h-screen flex flex-col justify-center items-center text-gray-900 dark:text-gray-100 py-16">
         <div className="container mx-auto">
           <h3 className="text-lg font-light text-left mb-4">Nos ateliers</h3>
