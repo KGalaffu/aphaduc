@@ -200,22 +200,6 @@ const [selectedOffer, setSelectedOffer] = useState<
       bgColor: "bg-yellow-500",
       imgSrc: "https://craft.stiftung-mercator.ch/files/Fotos/_previewImage2x/PLN-Kommunikation.jpg", // Tu peux ajouter une image appropriée
     },
-    // {
-    //   id: 5,
-    //   title: "Update für die Demokratie?",
-    //   description:
-    //     "Das Demokratie Labor Basel testet und erforscht demokratische Prozesse und verschiedene Formen der Bürger:innen-Beteiligung.",
-    //   bgColor: "bg-blue-500",
-    // },
-    // {
-    //   id: 6,
-    //   title: "51 Klima-Karten fördern Partizipation auf lokaler Ebene",
-    //   description:
-    //     "Wo stehen Kantone und Gemeinden hinsichtlich der Pariser Klimaziele? Interaktive Klima-Karten geben Antworten.",
-    //   bgColor: "bg-pink-500",
-    //   imgSrc:
-    //     "https://craft.stiftung-mercator.ch/files/Fotos/_previewImage2x/PLN-Kommunikation.jpg",
-    // },
   ];
 
   return (
@@ -244,56 +228,57 @@ const [selectedOffer, setSelectedOffer] = useState<
       </section>
 
       <div className={`${selectedCard ? '' : 'container'}`}>
-  <section className="w-full h-50 grid grid-cols-1 md:grid-cols-4 gap-4 px-12 py-12">
+  <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 sm:px-8 md:px-12 py-6">
     {cards.map((card) => (
       <motion.div
         key={card.id}
-        className={`${card.bgColor} text-black p-8 group cursor-pointer`}
+        className={`${card.bgColor} text-black p-6 sm:p-8 group cursor-pointer rounded-lg`}
         layoutId={`card-${card.id}`}
         onClick={() => setSelectedCard(card)}
-        initial={{ opacity: 0, scale: 0.8 }} // Animation initiale des cartes
-        animate={{ opacity: 1, scale: 1 }} // Animation des cartes
-        exit={{ opacity: 0, scale: 0.8 }} // Animation de sortie des cartes
-        transition={{ duration: 0.5 }} // Durée de l'animation
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.8 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded-md">
           {card.imgSrc && (
             <img
               src={card.imgSrc}
               alt={card.title}
-              className="mb-4 w-full h-auto transform transition-transform duration-500 group-hover:scale-105 p-2"
+              className="mb-4 w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
             />
           )}
         </div>
-        <h3 className="text-xl font-bold transform transition-transform duration-500 group-hover:scale-105 p-2">
+        <h3 className="text-lg sm:text-xl font-bold transform transition-transform duration-500 group-hover:scale-105">
           {card.title}
         </h3>
-        <p className="pt-8">{card.description}</p>
+        <p className="pt-4 text-sm sm:text-base">{card.description}</p>
       </motion.div>
     ))}
-<AnimatePresence>
-        {selectedCard && (
-          <motion.div
-          className="fixed top-0 left-0 w-full h-full bg-black text-white z-50 flex flex-col justify-center items-center text-center p-4 md:p-8"
+    <AnimatePresence>
+      {selectedCard && (
+        <motion.div
+          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center p-4 overflow-y-auto"
           layoutId={`card-${selectedCard.id}`}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.5 }}
-            onClick={() => setSelectedCard(null)} // Ferme au clic
-          >
-            <div className="mx-auto px-8">
-              <h3 className="text-4xl font-bold mb-4 pb-8">{selectedCard.title}</h3>
-              <p className="text-lg leading-relaxed mb-4">{selectedCard.fullContent}</p>
-              <div className="mt-8">
-                <a href="#" className="underline text-lg pt-8">En savoir plus</a>
-              </div>
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.5 }}
+          onClick={() => setSelectedCard(null)}
+        >
+          <div className="w-full max-w-3xl bg-white text-black p-6 md:p-8 rounded-lg">
+            <h3 className="text-2xl sm:text-4xl font-bold mb-4">{selectedCard.title}</h3>
+            <p className="text-sm sm:text-lg leading-relaxed mb-4">{selectedCard.fullContent}</p>
+            <div className="mt-8">
+              <a href="#" className="underline text-sm sm:text-lg">En savoir plus</a>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      </section>
-      </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </section>
+</div>
+
 
       <section className="w-full h-screen flex flex-col justify-center items-center text-gray-900 dark:text-gray-100 py-16">
         <div className="container mx-auto">
