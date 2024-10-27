@@ -5,7 +5,7 @@ import { getAllNotes } from "@/lib/actionsNotes";
 import { File } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import { FilePenLine } from 'lucide-react';
-import DeleteButton from "@/app/components/DeleteButton";
+import DeleteButton from "@/app/[locale]/components/DeleteButton";
 
 export default async function DashboardPage() {
 

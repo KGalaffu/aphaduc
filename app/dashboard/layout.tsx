@@ -1,6 +1,6 @@
 
-import ButtonSignOut from "@/app/components/ButtonSignOut";
-import DashboardNav from "@/app/components/DashboardNav";
+import ButtonSignOut from "@/app/[locale]/components/ButtonSignOut";
+import DashboardNav from "@/app/[locale]/components/DashboardNav";
 import {getUser } from "@/lib/actionsUsers";
 import { prisma } from "@/lib/db";
 
