@@ -83,6 +83,62 @@ export default {
   
   We are always looking for passionate volunteers to help us in our activities. If you wish to get involved, do not hesitate to contact us.`,
       },
+      card5: {
+        title: "Workshops and Trainings in Cameroon",
+        description: "Discover our workshops in Cameroon",
+        fullContent: `1. Cultural Awareness Workshops
+      Objective: Promote the integration of disadvantaged and disabled children by allowing them to share and explore different cultures.
+      Activities: Local traditions presentations, youth-adapted cultural exchanges, and traditional cooking classes to encourage participation.
+      
+      2. Life Skills Workshops
+      Objective: Develop essential practical skills for daily life, tailored to children's specific needs.
+      Activities: Simple resource management, personal autonomy initiation, and practical workshops on hygiene and health care.
+      
+      3. Specialized Education Workshops
+      Objective: Provide educational support to children with disabilities using adapted methods.
+      Activities: Tailored learning sessions with specialized educators, playful activities to stimulate learning, and functional rehabilitation programs.
+      
+      4. Health and Wellness Workshops
+      Objective: Promote the physical and mental health of children, considering emergency situations.
+      Activities: Nutrition awareness, first aid workshops, and relaxation or yoga sessions adapted for children.
+      
+      5. Professional Training (for young adults)
+      Objective: Prepare young adults, especially those who have faced difficult situations, for the labor market's demands.
+      Activities: Technical skills training (craftsmanship, sustainable agriculture) and entrepreneurship courses focused on local projects.
+      
+      6. Personal Development Workshops
+      Objective: Boost self-confidence and self-esteem for children and young adults.
+      Activities: Group activities to foster cohesion, role-playing for emotional management, and training on social and interpersonal skills.
+        `,
+      },
+      card6: {
+        title: "Workshops and Trainings in Switzerland",
+        description: "Discover our workshops in Switzerland",
+        fullContent: `
+      Cultural Awareness Workshops
+      Objective: Facilitate the integration of young migrants into Swiss society.
+      Activities: Workshops on Swiss customs, cultural exchanges, and local cooking classes.
+      
+      Life Skills Workshops
+      Objective: Help young people develop practical skills for daily life.
+      Activities: Personal budget management, meal planning, and job interview simulations.
+      
+      Educational Support Workshops
+      Objective: Provide academic support for young migrants.
+      Activities: Tutoring in school subjects (math, science), homework assistance.
+      
+      Professional Training
+      Objective: Prepare young people for the demands of the Swiss job market.
+      Activities: Technical skills training (IT, healthcare professions) and courses on entrepreneurship.
+      
+      Rights and Access to Services Workshops
+      Objective: Inform young migrants about their rights and available resources.
+      Activities: Seminars with lawyers on migrant rights, information sessions on access to education.
+      
+      Personal Development Workshops
+      Objective: Strengthen self-confidence and self-esteem among young people.
+      Activities: Team-building activities, interpersonal skills training, and workshops on emotional management.
+        `,
     },
-  } as const;
-  
+},
+} as const;

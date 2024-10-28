@@ -10,12 +10,13 @@ const config = {
   ],
   prefix: "",
   safelist: [
-    'bg-blue-500',
-    'bg-yellow-200',
-    'bg-yellow-300',
-    'bg-yellow-400',
-    'bg-yellow-500',
-    // Ajoutez ici toutes les autres classes dynamiques que vous utilisez
+    'bg-gradient-to-br',
+    'from-pink-100', 'via-pink-200', 'to-pink-300',
+    'from-blue-100', 'via-blue-200', 'to-blue-300',
+    'from-green-100', 'via-green-200', 'to-green-300',
+    'from-purple-100', 'via-purple-200', 'to-purple-300',
+    'from-yellow-100', 'via-yellow-200', 'to-yellow-300',
+    'from-teal-100', 'via-teal-200', 'to-teal-300',
   ],
   theme: {
     container: {
