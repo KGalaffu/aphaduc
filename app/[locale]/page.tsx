@@ -68,11 +68,11 @@ export default function Home() {
 
       {/* Section des cartes */}
       <div className={`mb-20 ${selectedCard ? '' : 'container'}`}>
-        <section className="w-full min-h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-4 md:px-8 py-8 md:py-12">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 md:px-8 py-8 md:py-12 items-stretch auto-rows-fr">
           {cards.map((card) => (
             <motion.div
               key={card.id}
-              className={`${card.bgColor} text-black p-6 sm:p-8 group cursor-pointer flex flex-col justify-center items-center rounded-lg shadow-lg mt-12 mb-12`}
+              className={`${card.bgColor} text-black p-6 sm:p-8 group cursor-pointer flex flex-col h-full rounded-lg shadow-lg`}
               layoutId={`card-${card.id}`}
               onClick={() => setSelectedCard(card)}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -80,10 +80,14 @@ export default function Home() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-lg sm:text-xl font-bold transform transition-transform duration-500 group-hover:scale-105 text-center p-2">
-                {t(card.titleKey)}
-              </h3>
-              <p className="pt-4 sm:pt-8 text-center">{t(card.descriptionKey)}</p>
+              <div className="flex flex-col flex-grow justify-between">
+                <h3 className="text-lg sm:text-xl font-bold transform transition-transform duration-500 group-hover:scale-105 text-center p-2">
+                  {t(card.titleKey)}
+                </h3>
+                <p className="pt-4 sm:pt-8 text-center flex-grow">
+                  {t(card.descriptionKey)}
+                </p>
+              </div>
             </motion.div>
           ))}
           <AnimatePresence>
