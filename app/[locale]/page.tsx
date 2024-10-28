@@ -11,8 +11,10 @@ import { useTheme } from "next-themes";
 import cards from "./data/cardsData";
 import offers from "./data/offersData";
 import Footer from "./components/Footer";
+import { useI18n } from '../locales/client';
 
 export default function Home() {
+  const t = useI18n();
   const { data: session } = useSession();
   const { theme } = useTheme();
   const [selectedCard, setSelectedCard] = useState<{
@@ -60,9 +62,8 @@ export default function Home() {
           />
           <Cursor />
         </h1>
-        <p className="my-2 text:xl md:text italic">
-          Découvrez comment nous soutenons les migrants et les personnes en voie de naturalisation à Genève et au Cameroun
-        </p>
+        {/* <p className="my-2 text-xl md:text italic">{t('hello')}</p> */}
+        <p className="my-2 text-xl md:text italic">{t('subtitle')}</p>
       </section>
 
       <div className={`${selectedCard ? '' : 'container'}`}>
@@ -79,9 +80,9 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-lg sm:text-xl font-bold transform transition-transform duration-500 group-hover:scale-105 p-2">
-                {card.title}
+                {t(card.titleKey)}
               </h3>
-              <p className="pt-4 sm:pt-8">{card.description}</p>
+              <p className="pt-4 sm:pt-8">{t(card.descriptionKey)}</p>
             </motion.div>
           ))}
           <AnimatePresence>
@@ -103,10 +104,10 @@ export default function Home() {
                 </button>
                 <div className="mx-auto px-4 md:px-8 py-4 md:py-8 w-full lg:max-w-none overflow-y-auto max-h-full">
                   <h3 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 text-center lg:text-left">
-                    {selectedCard.title}
+                    {t(selectedCard.titleKey)}
                   </h3>
                   <p className="text-sm sm:text-base md:text-lg leading-relaxed lg:leading-loose text-center lg:text-left w-full">
-                    {selectedCard.fullContent}
+                    {t(selectedCard.fullContentKey)}
                   </p>
                 </div>
               </motion.div>
@@ -114,6 +115,7 @@ export default function Home() {
           </AnimatePresence>
         </section>
       </div>
+
 
       <section className="w-full h-screen flex flex-col justify-center items-center text-gray-900 dark:text-gray-100 py-16">
         <div className="container mx-auto">
