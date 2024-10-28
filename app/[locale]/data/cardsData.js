@@ -14,7 +14,7 @@ const cards = [
           Nous croyons fermement que chaque individu a un potentiel unique à offrir. C'est pourquoi nous nous engageons à promouvoir l'égalité des chances et à soutenir le développement personnel et professionnel de chaque membre de notre communauté.
           Rejoignez-nous dans notre mission et découvrez comment vous pouvez contribuer à faire une différence. Ensemble, construisons un avenir meilleur, basé sur la solidarité, le respect, et l’inclusion.
         `,
-        bgColor: "bg-yellow-500",
+        bgColor: "bg-yellow-200",
         // imgSrc: "https://craft.stiftung-mercator.ch/files/Fotos/_previewImage2x/PLN-Kommunikation.jpg", // Tu peux ajouter une image appropriée
       },
       {
@@ -46,7 +46,7 @@ const cards = [
           Partenaires
           Nous collaborons avec diverses organisations et institutions, tant au niveau local qu'international, pour renforcer nos initiatives et maximiser notre impact.
         `,
-        bgColor: "bg-yellow-500",
+        bgColor: "bg-yellow-300",
       },
       {
         id: 3,
@@ -71,7 +71,7 @@ const cards = [
     
           Ce programme représente une réponse systémique aux défis rencontrés par les jeunes migrants, en leur offrant les outils nécessaires pour réussir dans un environnement éducatif et social compétitif.
         `,
-        bgColor: "bg-yellow-500",
+        bgColor: "bg-yellow-400",
         // imgSrc:
         //   "https://craft.stiftung-mercator.ch/files/Fotos/_previewImage2x/PLN-Kommunikation.jpg",
       },

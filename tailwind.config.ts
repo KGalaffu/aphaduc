@@ -7,8 +7,16 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
+  safelist: [
+    'bg-blue-500',
+    'bg-yellow-200',
+    'bg-yellow-300',
+    'bg-yellow-400',
+    'bg-yellow-500',
+    // Ajoutez ici toutes les autres classes dynamiques que vous utilisez
+  ],
   theme: {
     container: {
       center: true,
