@@ -13,18 +13,21 @@ import offers from "./data/offersData";
 import Footer from "./components/Footer";
 import { useI18n } from '../locales/client';
 
+type CardType = {
+  id: number;
+  titleKey: string;
+  descriptionKey: string;
+  fullContentKey?: string;
+  bgColor: string;
+  imgSrc?: string;
+};
+
 export default function Home() {
   const t = useI18n();
   const { data: session } = useSession();
   const { theme } = useTheme();
-  const [selectedCard, setSelectedCard] = useState<{
-    id: number;
-    title: string;
-    description: string;
-    fullContent?: string;
-    bgColor: string;
-    imgSrc?: string;
-  } | null>(null);
+  const [selectedCard, setSelectedCard] = useState<CardType | null>(null);
+
 
   const [selectedOffer, setSelectedOffer] = useState<{
     id: number;
