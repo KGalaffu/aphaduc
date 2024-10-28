@@ -1,25 +1,28 @@
 export default {
     hello: "Hello",
-    subtitle: "Find out how we support migrants and people in the process of naturalisation in Geneva and Cameroon",
+    subtitle:
+      "Find out how we support migrants and people in the process of naturalisation in Geneva and Cameroon",
     cards: {
       card1: {
         title: "Welcome to the Aphaduc Association website",
-        description: "Discover how we support migrants and people in the process of naturalisation in Geneva and Cameroon.",
-        fullContent: `We are delighted to welcome you to the Aphaduc Association website, a non-profit organization dedicated to improving the quality of life of migrants and people in the process of naturalization. Based in Geneva, our association works with passion and commitment to create an inclusive and supportive environment where everyone can flourish and find their place in society.
+        description:
+          "Discover how we support migrants and people in the process of naturalisation in Geneva and Cameroon.",
+        fullContent: `We are delighted to welcome you to the **Aphaduc Association** website, a non-profit organization dedicated to improving the quality of life of migrants and people in the process of naturalization. Based in Geneva, our association works with passion and commitment to create an inclusive and supportive environment where everyone can flourish and find their place in society.
   
   Since our inception, we have developed a multitude of initiatives and programs aimed at supporting vulnerable populations, both in Geneva and Cameroon. Through our workshops, training sessions, and discussion groups, we promote exchange, knowledge, and mutual support among members of our community.
   
-  Our flagship project, the APHADUC Reception and Research Center, aims to offer a refuge to disadvantaged and disabled children, while providing them with the necessary resources to access education and training. 
+  Our flagship project, the **APHADUC Reception and Research Center**, aims to offer a refuge to disadvantaged and disabled children, while providing them with the necessary resources to access education and training.
   
-  In parallel, our Educational Integration Support Program for Young Migrants helps young people validate their skills and integrate into the educational system.
+  In parallel, our **Educational Integration Support Program for Young Migrants** helps young people validate their skills and integrate into the educational system.
   
   We firmly believe that every individual has a unique potential to offer. That's why we are committed to promoting equal opportunities and supporting the personal and professional development of each member of our community.
   
-  Join us in our mission and discover how you can contribute to making a difference. Together, let's build a better future based on solidarity, respect, and inclusion.`,
+  **Join us** in our mission and discover how you can contribute to making a difference. *Together, let's build a better future based on solidarity, respect, and inclusion.*`,
       },
       card2: {
         title: "About Us",
-        description: "Discover our mission and history, and how we have impacted the lives of many migrants in Geneva and Cameroon.",
+        description:
+          "Discover our mission and history, and how we have impacted the lives of many migrants in Geneva and Cameroon.",
         fullContent: `**Association History**
   
   **Our Mission**
@@ -48,10 +51,11 @@ export default {
       },
       card3: {
         title: "Our Projects",
-        description: "Discover our Reception and Research Center in Cameroon and our Support Program for young migrants.",
+        description:
+          "Discover our Reception and Research Center in Cameroon and our Support Program for young migrants.",
         fullContent: `**APHADUC Reception and Research Center**
   
-  The APHADUC Reception and Research Center project is designed to provide a safe and welcoming space for disadvantaged and disabled children in Cameroon. This center aims to meet urgent needs by offering a range of essential services, including:
+  The **APHADUC Reception and Research Center** project is designed to provide a safe and welcoming space for disadvantaged and disabled children in Cameroon. This center aims to meet urgent needs by offering a range of essential services, including:
   
   - **Temporary accommodation**: Secure facilities where children can find refuge, feel safe, and receive emotional support.
   - **Emergency meals**: Nutritious meals for those who need them most, ensuring that every child has access to adequate nutrition.
@@ -86,59 +90,81 @@ export default {
       card5: {
         title: "Workshops and Trainings in Cameroon",
         description: "Discover our workshops in Cameroon",
-        fullContent: `1. Cultural Awareness Workshops
-      Objective: Promote the integration of disadvantaged and disabled children by allowing them to share and explore different cultures.
-      Activities: Local traditions presentations, youth-adapted cultural exchanges, and traditional cooking classes to encourage participation.
-      
-      2. Life Skills Workshops
-      Objective: Develop essential practical skills for daily life, tailored to children's specific needs.
-      Activities: Simple resource management, personal autonomy initiation, and practical workshops on hygiene and health care.
-      
-      3. Specialized Education Workshops
-      Objective: Provide educational support to children with disabilities using adapted methods.
-      Activities: Tailored learning sessions with specialized educators, playful activities to stimulate learning, and functional rehabilitation programs.
-      
-      4. Health and Wellness Workshops
-      Objective: Promote the physical and mental health of children, considering emergency situations.
-      Activities: Nutrition awareness, first aid workshops, and relaxation or yoga sessions adapted for children.
-      
-      5. Professional Training (for young adults)
-      Objective: Prepare young adults, especially those who have faced difficult situations, for the labor market's demands.
-      Activities: Technical skills training (craftsmanship, sustainable agriculture) and entrepreneurship courses focused on local projects.
-      
-      6. Personal Development Workshops
-      Objective: Boost self-confidence and self-esteem for children and young adults.
-      Activities: Group activities to foster cohesion, role-playing for emotional management, and training on social and interpersonal skills.
-        `,
+        fullContent: `1. **Cultural Awareness Workshops**
+  
+     **Objective**: Promote the integration of disadvantaged and disabled children by allowing them to share and explore different cultures.
+  
+     **Activities**: Local traditions presentations, youth-adapted cultural exchanges, and traditional cooking classes to encourage participation.
+  
+  2. **Life Skills Workshops**
+  
+     **Objective**: Develop essential practical skills for daily life, tailored to children's specific needs.
+  
+     **Activities**: Simple resource management, personal autonomy initiation, and practical workshops on hygiene and health care.
+  
+  3. **Specialized Education Workshops**
+  
+     **Objective**: Provide educational support to children with disabilities using adapted methods.
+  
+     **Activities**: Tailored learning sessions with specialized educators, playful activities to stimulate learning, and functional rehabilitation programs.
+  
+  4. **Health and Wellness Workshops**
+  
+     **Objective**: Promote the physical and mental health of children, considering emergency situations.
+  
+     **Activities**: Nutrition awareness, first aid workshops, and relaxation or yoga sessions adapted for children.
+  
+  5. **Professional Training (for young adults)**
+  
+     **Objective**: Prepare young adults, especially those who have faced difficult situations, for the labor market's demands.
+  
+     **Activities**: Technical skills training (craftsmanship, sustainable agriculture) and entrepreneurship courses focused on local projects.
+  
+  6. **Personal Development Workshops**
+  
+     **Objective**: Boost self-confidence and self-esteem for children and young adults.
+  
+     **Activities**: Group activities to foster cohesion, role-playing for emotional management, and training on social and interpersonal skills.`,
       },
       card6: {
         title: "Workshops and Trainings in Switzerland",
         description: "Discover our workshops in Switzerland",
-        fullContent: `
-      Cultural Awareness Workshops
-      Objective: Facilitate the integration of young migrants into Swiss society.
-      Activities: Workshops on Swiss customs, cultural exchanges, and local cooking classes.
-      
-      Life Skills Workshops
-      Objective: Help young people develop practical skills for daily life.
-      Activities: Personal budget management, meal planning, and job interview simulations.
-      
-      Educational Support Workshops
-      Objective: Provide academic support for young migrants.
-      Activities: Tutoring in school subjects (math, science), homework assistance.
-      
-      Professional Training
-      Objective: Prepare young people for the demands of the Swiss job market.
-      Activities: Technical skills training (IT, healthcare professions) and courses on entrepreneurship.
-      
-      Rights and Access to Services Workshops
-      Objective: Inform young migrants about their rights and available resources.
-      Activities: Seminars with lawyers on migrant rights, information sessions on access to education.
-      
-      Personal Development Workshops
-      Objective: Strengthen self-confidence and self-esteem among young people.
-      Activities: Team-building activities, interpersonal skills training, and workshops on emotional management.
-        `,
+        fullContent: `1. **Cultural Awareness Workshops**
+  
+     **Objective**: Facilitate the integration of young migrants into Swiss society.
+  
+     **Activities**: Workshops on Swiss customs, cultural exchanges, and local cooking classes.
+  
+  2. **Life Skills Workshops**
+  
+     **Objective**: Help young people develop practical skills for daily life.
+  
+     **Activities**: Personal budget management, meal planning, and job interview simulations.
+  
+  3. **Educational Support Workshops**
+  
+     **Objective**: Provide academic support for young migrants.
+  
+     **Activities**: Tutoring in school subjects (math, science), homework assistance.
+  
+  4. **Professional Training**
+  
+     **Objective**: Prepare young people for the demands of the Swiss job market.
+  
+     **Activities**: Technical skills training (IT, healthcare professions) and courses on entrepreneurship.
+  
+  5. **Rights and Access to Services Workshops**
+  
+     **Objective**: Inform young migrants about their rights and available resources.
+  
+     **Activities**: Seminars with lawyers on migrant rights, information sessions on access to education.
+  
+  6. **Personal Development Workshops**
+  
+     **Objective**: Strengthen self-confidence and self-esteem among young people.
+  
+     **Activities**: Team-building activities, interpersonal skills training, and workshops on emotional management.`,
+      },
     },
-},
-} as const;
+  } as const;
+  

@@ -11,6 +11,7 @@ import { useTheme } from "next-themes";
 import cards, { CardType } from './data/cardsType';
 import Footer from "./components/Footer";
 import { useI18n } from '../locales/client';
+import ReactMarkdown from 'react-markdown';
 
 export default function Home() {
   const t = useI18n();
@@ -112,10 +113,11 @@ export default function Home() {
                     {t(selectedCard.titleKey)}
                   </h3>
                   {selectedCard.fullContentKey && (
-                    <p className="text-sm sm:text-base md:text-lg leading-relaxed lg:leading-loose text-center lg:text-left w-full">
-                      {t(selectedCard.fullContentKey)}
-                    </p>
-                  )}
+  <ReactMarkdown className="text-sm sm:text-base md:text-lg leading-relaxed lg:leading-loose text-center lg:text-left w-full">
+    {t(selectedCard.fullContentKey)}
+  </ReactMarkdown>
+)}
+
                 </div>
               </motion.div>
             )}
