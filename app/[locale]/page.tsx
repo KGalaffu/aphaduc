@@ -19,14 +19,6 @@ export default function Home() {
   const { theme } = useTheme();
   const [selectedCard, setSelectedCard] = useState<CardType | null>(null);
 
-  // const [selectedOffer, setSelectedOffer] = useState<{
-  //   id: number;
-  //   date: string;
-  //   title: string;
-  //   details: string;
-  //   link: string;
-  // } | null>(null);
-
   if (session) {
     redirect("/dashboard/notes");
   }
@@ -39,7 +31,9 @@ export default function Home() {
         href="https://fonts.cdnfonts.com/css/helvetica-neue-lt-pro-2"
         rel="stylesheet"
       />
-      <section className="w-full h-screen flex items-center justify-center flex-col gap-2">
+      
+      {/* Section d'accueil */}
+      <section className="w-full min-h-screen flex items-center justify-center flex-col gap-2">
         {/* <Image
           width={500}
           height={500}
@@ -66,14 +60,15 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="my-2 text-xl md:text italic bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text"
+          className="my-2 text-xl md:text italic bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text text-center px-4"
         >
           {t('subtitle')}
         </motion.p>
       </section>
 
+      {/* Section des cartes */}
       <div className={`mb-20 ${selectedCard ? '' : 'container'}`}>
-        <section className="w-full h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-4 md:px-8 py-8 md:py-12">
+        <section className="w-full min-h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-4 md:px-8 py-8 md:py-12">
           {cards.map((card) => (
             <motion.div
               key={card.id}
@@ -113,74 +108,18 @@ export default function Home() {
                     {t(selectedCard.titleKey)}
                   </h3>
                   {selectedCard.fullContentKey && (
-  <ReactMarkdown className="text-sm sm:text-base md:text-lg leading-relaxed lg:leading-loose text-center lg:text-left w-full">
-    {t(selectedCard.fullContentKey)}
-  </ReactMarkdown>
-)}
-
+                    <ReactMarkdown className="text-sm sm:text-base md:text-lg leading-relaxed lg:leading-loose text-center lg:text-left w-full">
+                      {t(selectedCard.fullContentKey)}
+                    </ReactMarkdown>
+                  )}
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         </section>
       </div>
-
-
-{/* 
-      <section className="w-full h-screen flex flex-col justify-center items-center text-gray-900 dark:text-gray-100 py-16">
-        <div className="container mx-auto">
-          <h3 className="text-lg font-light text-left mb-4">Nos ateliers</h3>
-          <div className="space-y-4">
-            {offers.map((offer) => (
-              <motion.div
-                key={offer.id}
-                className="flex justify-between items-center border-t border-b border-gray-700 py-4 cursor-pointer"
-                layoutId={`offer-${offer.id}`}
-                onClick={() => setSelectedOffer(offer)}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="text-xl font-bold">{offer.title}</div>
-                <div className="text-right">
-                  <a href="#" className="underline text-sm">
-                    {offer.link}
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <AnimatePresence>
-        {selectedOffer && (
-          <motion.div
-            className="fixed top-0 left-0 w-full h-full bg-black text-white z-50 flex flex-col justify-center items-center text-center p-4 md:p-8 overflow-y-auto"
-            style={{ maxHeight: '100vh' }}
-            layoutId={`card-${selectedOffer.id}`}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.5 }}
-          >
-            <button
-              onClick={() => setSelectedOffer(null)}
-              className="absolute top-4 right-4 text-xl sm:text-2xl md:text-3xl font-bold"
-            >
-              ✕
-            </button>
-            <div className="mx-auto px-4 md:px-8 py-4 md:py-8 max-w-lg sm:max-w-2xl overflow-y-auto max-h-full">
-              <h3 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4">{selectedOffer.title}</h3>
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed whitespace-pre-wrap">
-                {selectedOffer.details}
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence> */}
-
+      
+      {/* Footer */}
       <Footer />
     </>
   );
