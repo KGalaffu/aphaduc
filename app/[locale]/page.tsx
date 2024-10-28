@@ -8,19 +8,10 @@ import Whitelogo from "../../public/whitelogo.png";
 import Darklogo from "../../public/darklogo.png";
 import { Typewriter, Cursor } from "react-simple-typewriter";
 import { useTheme } from "next-themes";
-import cards from "./data/cardsData";
+import cards, { CardType } from './data/cardsType';
 import offers from "./data/offersData";
 import Footer from "./components/Footer";
 import { useI18n } from '../locales/client';
-
-type CardType = {
-  id: number;
-  titleKey: string;
-  descriptionKey: string;
-  fullContentKey?: string;
-  bgColor: string;
-  imgSrc?: string;
-};
 
 export default function Home() {
   const t = useI18n();
@@ -65,7 +56,6 @@ export default function Home() {
           />
           <Cursor />
         </h1>
-        {/* <p className="my-2 text-xl md:text italic">{t('hello')}</p> */}
         <p className="my-2 text-xl md:text italic">{t('subtitle')}</p>
       </section>
 
@@ -109,9 +99,11 @@ export default function Home() {
                   <h3 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 text-center lg:text-left">
                     {t(selectedCard.titleKey)}
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg leading-relaxed lg:leading-loose text-center lg:text-left w-full">
-                    {t(selectedCard.fullContentKey)}
-                  </p>
+                  {selectedCard.fullContentKey && (
+                    <p className="text-sm sm:text-base md:text-lg leading-relaxed lg:leading-loose text-center lg:text-left w-full">
+                      {t(selectedCard.fullContentKey)}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             )}
