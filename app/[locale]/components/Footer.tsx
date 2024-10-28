@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="text-dark dark:text-white py-16 mt-20">
+    <footer className="w-full h-80 text-dark dark:text-white py-16 mt-20">
         <div className="container mx-auto flex justify-between items-start mt-20">
             <div>
                 <p className="mb-2">Rue Jean-Dassier 7</p>
