@@ -1,5 +1,3 @@
-// cardsData.ts
-
 type CardKey =
   | 'cards.card1.title'
   | 'cards.card1.description'
@@ -36,23 +34,22 @@ const cards: CardType[] = [
     titleKey: 'cards.card2.title',
     descriptionKey: 'cards.card2.description',
     fullContentKey: 'cards.card2.fullContent',
-    bgColor: 'bg-yellow-200',
+    bgColor: 'bg-yellow-300',
   },
   {
     id: 3,
     titleKey: 'cards.card3.title',
     descriptionKey: 'cards.card3.description',
     fullContentKey: 'cards.card3.fullContent',
-    bgColor: 'bg-yellow-200',
+    bgColor: 'bg-yellow-400',
   },
   {
     id: 4,
     titleKey: 'cards.card4.title',
     descriptionKey: 'cards.card4.description',
     fullContentKey: 'cards.card4.fullContent',
-    bgColor: 'bg-yellow-200',
+    bgColor: 'bg-yellow-500',
   },
-  // ... autres cartes ...
 ];
 
 export default cards;
